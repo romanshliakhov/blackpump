@@ -1,0 +1,32 @@
+.moving-list {
+  @include for-tablet {
+    gap: clamp(15px, 1.4085vw, 20px);
+  }
+
+  @include tablet {
+    gap: clamp(10px, 1.953vw, 20px);
+  }
+
+  @include for-small-tablet{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include small-tablet{
+    @include for-mobile{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include for-mobile{
+    display: grid;
+  }
+
+  @include mobile{
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    width: calc(100% + (var(--container-offset) * 2));
+    margin:-10px calc(var(--container-offset) * -1);
+    padding: 10px var(--container-offset);
+  }
+}

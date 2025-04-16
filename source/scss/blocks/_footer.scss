@@ -1,0 +1,235 @@
+.footer {
+  background: var(--black);
+  border-radius: 24px;
+  max-width: 1351px;
+  width: 100%;
+  padding: 30px 24px 0;
+  margin: 0 auto 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @include desktop {
+    margin: 0 80px 80px;
+  }
+
+  &__top {
+    background-color: var(--blue);
+    padding: 100px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    h2 {
+      max-width: 575px;
+      background: transparent;
+      -webkit-text-fill-color: initial;
+      color: var(--white);
+    }
+  }
+
+  &__contacts {
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    ul:not([class]) {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 12px;
+
+      @include desktop {
+        gap: 10px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+
+        span {
+          font-family: var(--second-family);
+          color: var(--white);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          @include desktop {
+            @include for-tablet {
+              font-size: clamp(10px, 0.9155vw, 13px);
+            }
+          }
+
+          @include tablet {
+            @include for-mobile {
+              font-size: 10px;
+            }
+          }
+
+          @include small-tablet {
+            font-size: 13px;
+          }
+        }
+
+        a {
+          font-family: var(--second-family);
+          color: var(--white);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          transition: all 0.3s;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          text-decoration-color: transparent;
+
+          i {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-style: normal;
+            color: var(--white);
+            transition: text-decoration-color 0.3s;
+            text-decoration-color: var(--white);
+          }
+
+          @include desktop {
+            @include for-tablet {
+              font-size: clamp(10px, 0.9155vw, 13px);
+            }
+          }
+
+          @include tablet {
+            @include for-mobile {
+              font-size: 10px;
+            }
+          }
+
+          @include small-tablet {
+            font-size: 13px;
+          }
+
+          &:hover {
+            color: var(--green-2);
+            text-decoration-color: inherit;
+
+            i {
+              color: var(--green-2);
+              text-decoration-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    width: 185px;
+    height: 46px;
+    filter: invert(1) brightness(2);
+
+    svg,
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__box {
+    max-width: 326px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__text {
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  &__nav {
+    display: flex;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      a {
+        font-family: var(--second-family);
+        font-size: 16px;
+        line-height: 137%;
+        font-weight: 400;
+        white-space: nowrap;
+        color:  rgba(255, 255, 255, .6);
+        transition: 0.3s ease;
+
+        &:hover,
+        &:active {
+          color: rgba(255, 255, 255, 1.0);
+        }
+      }
+    }
+  }
+
+
+
+
+
+  &__bottom {
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.6;
+  }
+
+  &__copy {
+    font-size: 14px;
+    line-height: 142%;
+    color:  rgba(255, 255, 255, .6);
+    letter-spacing: -0.2px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    li {
+      padding: 0 16px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 142%;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+        color:  rgba(255, 255, 255, .6);
+        transition: 0.3s ease;
+
+        &:hover,
+        &:active {
+          color: rgba(255, 255, 255, 1.0);
+        }
+      }
+    }
+  }
+}

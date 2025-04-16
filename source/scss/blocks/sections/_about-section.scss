@@ -1,0 +1,123 @@
+.about-section {
+  margin-bottom: 60px;
+
+  .container {
+    max-width: 1216px;
+  }
+
+  &__wrapp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+  }
+
+  .main-top {
+    max-width: 740px;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 484px;
+    gap: 60px;
+  }
+
+  &__box {
+    position: relative;
+    background: var(--gr-a);
+    border-radius: 44px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &-image {
+      display: flex;
+      width: 417px;
+      height: 626px;
+
+      picture,
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-memes {
+      position: absolute;
+      right: 40px;
+      bottom: 163px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding-right: 6px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.67);
+      backdrop-filter: blur(40.65px);
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        li + li {
+          margin-left: -7px;
+        }
+
+        span {
+          flex-shrink: 0;
+          display: flex;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid var(--br-d);
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 100%;
+        font-weight: 550;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(72, 117, 255, 0.20);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        fill: transparent;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 120%;
+      font-weight: 700;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 157%;
+    }
+  }
+}

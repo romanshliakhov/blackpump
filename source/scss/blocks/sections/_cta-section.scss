@@ -1,0 +1,101 @@
+.cta-section {
+  background: var(--bg-f);
+  padding: clamp(45px, 5.7639vw, 83px) 0;
+
+  &__box{
+    display: grid;
+    position: relative;
+    z-index: 1;
+    grid-gap: 24px clamp(70px, 7.0139vw, 101px);
+
+    @include for-laptop{
+      grid-template-columns: 1fr .78fr;
+    }
+
+    @include laptop{
+      @include for-tablet{
+        grid-template-columns: auto 1fr;
+      }
+    }
+
+    @include tablet{
+      grid-template-columns: 100%;
+    }
+
+  }
+
+  &__icon{
+    position: absolute;
+    left: 51%;
+    top: 0;
+    z-index: -1;
+    transform: translateY(-80%);
+
+    svg,img{
+      width: Min(14.9306vw, 215px);
+      height: Min(5.4861vw, 79px);
+    }
+
+    @include laptop{
+      @include for-tablet{
+        left: calc(clamp(390px, 42.3611vw, 610px) - 15px);
+      }
+    }
+
+    @include tablet{
+      left: calc(clamp(390px, 42.3611vw, 610px) + 20px);
+      top: 25%;
+
+      svg,img{
+        transform: rotate(25deg);
+      }
+    }
+
+    @include mobile{
+      display: none;
+    }
+
+
+    svg{
+      path {
+        animation: draw 3.5s ease-in infinite;
+      }
+    }
+    
+    @keyframes draw {
+      from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  .editor{
+    @include for-tablet{
+      justify-self: end;
+    }
+
+    @include for-mobile{
+      max-width: clamp(390px, 42.3611vw, 610px);
+    }
+
+    h1,h2,h3,h4,h5,h6{
+      font-family: var(--third-family);
+      font-weight: 400;
+      font-size: clamp(32px, 3.4722vw, 50px);
+      line-height: 102%;
+      color: var(--cl-d);
+
+      strong,b{
+        font-weight: 700;
+      }
+    }
+  }
+
+  &:last-of-type{
+    margin-bottom: 0 !important;
+  }
+
+}

@@ -1,0 +1,130 @@
+.form-section {
+  margin-bottom: 120px;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include for-desktop {
+      margin-bottom: 50px;
+      gap: 15px;
+    }
+
+    @include desktop {
+      margin-bottom: clamp(30px, 2.778vw, 40px);
+      gap: 15px;
+    }
+
+    @include mobile {
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    color:  var(--grey);
+    line-height: 127%; 
+    font-weight: 700;
+
+    @include for-desktop {
+      font-size: 29px;
+    }
+
+    @include desktop {
+      font-size: clamp(21px, 1.667vw, 24px);
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+
+    @include for-desktop {
+      gap: clamp(70px, 5.313vw, 102px);
+    }
+
+    @include desktop {
+      gap: clamp(30px, 4.861vw, 70px);
+    }
+  }
+
+  &__nav {
+    display: grid;
+
+    @include for-desktop {
+      gap: 46px;
+    }
+
+    @include desktop {
+      gap: clamp(10px, 3.472vw, 50px);
+    }
+
+    @include for-mobile {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item{
+    &.disabled{
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  &__btn {
+    height: clamp(55px, 4.861vw, 70px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+    border-radius: 49px;
+    font-family: var(--second-family);
+    line-height: 125%;
+    font-weight: 700;
+    transition: 0.2s ease;
+    color: var(--grey);
+
+    @include for-desktop {
+      font-size: 28px;
+    }
+
+    @include desktop {
+      font-size: clamp(14px, 1.667vw, 24px);
+    }
+
+    @include mobile {
+      font-size: 21px;
+    }
+
+    &.active {
+      background-color: var(--green);
+      color: var(--white);
+      pointer-events: none;
+    }
+
+    &.disabled{
+      background-color: var(--light-gray);
+      color: var(--grey);
+      pointer-events: all;
+
+      &:hover{
+        color: var(--green);
+        background: var(--white);
+        box-shadow: 0px 5px 10px 0px rgba(119, 150, 132, 0.30);
+      }
+    }
+
+    &:hover {
+      background-color: var(--green);
+      color: var(--white);
+    }
+  }
+}

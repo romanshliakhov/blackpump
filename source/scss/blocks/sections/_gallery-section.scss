@@ -1,0 +1,51 @@
+.gallery-section {
+  margin-bottom: 190px;
+
+  @include desktop {
+    @include for-tablet {
+      margin-bottom: clamp(113px, 7.0423vw, 158px);
+    }
+  }
+
+  @include tablet {
+    @include for-small-tablet {
+      margin-bottom: 113px;
+    }
+  }
+
+  @include small-tablet {
+    margin-bottom: 50px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 151px;
+
+    .gallery-slider {
+      @include for-small-tablet {
+        margin: -90px 0;
+      }
+    }
+
+    .main-btn {
+      align-self: center;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        gap: clamp(113px, 11.1268vw, 158px);
+      }
+    }
+
+    @include tablet {
+      @include for-small-tablet {
+        gap: 113px;
+      }
+
+      @include small-tablet {
+        gap: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.cooking-slider{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+    @include for-small-tablet {
+        height: clamp(400px, 39.7917vw, 573px);
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+      }
+    
+      @include small-tablet {
+        width: calc(100% + (var(--container-offset) * 2));
+        margin: 0 calc(var(--container-offset) * -1);
+      }
+
+   .swiper{
+
+    &-slide{
+        width: 100%;
+      
+    }
+
+    &-container{
+        width: 100%;
+    }
+
+    &-btn{
+        &.swiper-button-lock{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @include small-tablet{
+            display: none;
+        }
+    }
+   }
+
+   &__nav{
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(30px, 4.0972vw, 59px);
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    right: clamp(30px, 3.5417vw, 51px);
+    z-index: 3;
+   }
+}

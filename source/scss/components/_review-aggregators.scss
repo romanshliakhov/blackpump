@@ -1,0 +1,27 @@
+.review-aggregators {
+    display: flex;
+    align-items: center;
+    gap: 16px 24px;
+    flex-shrink: 0;
+
+    &__item {
+        padding: 11px 18px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        border-radius: 12px;
+        background-color:  var(--white);
+        box-shadow: 22.439px 15.707px 44.878px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    &__rating {
+        font-size: 16px;
+        line-height: 105%;
+        font-weight: 600;
+        color: var(--cl-e);
+    }
+
+    &__icon {
+        display: flex;
+    }
+}

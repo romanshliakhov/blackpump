@@ -1,0 +1,32 @@
+.testimonials-section {
+    margin-bottom: 156px;
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+
+        .main-top {
+            max-width: 675px;
+            gap: 13px;
+        }
+
+        .review-aggregators {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+}

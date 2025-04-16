@@ -1,0 +1,129 @@
+.service-card {
+  border-radius: 25px;
+  background: var(--light-gray);
+  padding: 30px 37px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: 178px;
+  transition: all 0.3s;
+
+  @include desktop {
+    @include for-tablet {
+      border-radius: clamp(14px, 1.6667vw, 20px);
+      min-height: clamp(102px, 12vw, 144px);
+    }
+  }
+
+  @include tablet {
+    min-height: 102px;
+    border-radius: 14px;
+  }
+
+  &:hover {
+    border-radius: clamp(10px, 1.4167vw, 17px);
+    background: var(--white);
+    box-shadow: 0px 6.159px 12.319px 0px rgba(119, 150, 132, 0.3);
+
+    @include desktop {
+      box-shadow: 0px 3.556px 7.111px 0px rgba(119, 150, 132, 0.3);
+    }
+
+    .service-card__title {
+      color: var(--green);
+    }
+  }
+
+  &__title {
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: clamp(16px, 1.6667vw, 20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    transition: all 0.3s;
+
+    & > svg {
+      width: 31px;
+      height: 31px;
+      flex-shrink: 0;
+
+      @include desktop {
+        @include for-tablet {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      @include tablet {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    i {
+      margin-left: auto;
+      align-self: flex-start;
+
+      svg {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+
+        @include desktop {
+          @include for-tablet {
+            width: 15px;
+            height: 15px;
+          }
+        }
+
+        @include tablet {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+
+    @include desktop {
+      @include for-tablet {
+        height: 24px;
+        font-size: clamp(12px, 1.3333vw, 16px);
+        line-height: 100%;
+      }
+    }
+
+    @include tablet {
+      height: 17px;
+      gap: 7px;
+      font-size: 12px;
+      line-height: 11.378px;
+    }
+  }
+
+  p {
+    color: var(--grey-2);
+    font-family: var(--second-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+
+    @include desktop {
+      @include for-tablet {
+        font-size: clamp(11px, 1.1667vw, 14px);
+        line-height: 128.571%;
+      }
+    }
+
+    @include tablet {
+      font-size: 11px;
+      line-height: 12.8px;
+    }
+  }
+}

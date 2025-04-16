@@ -1,0 +1,22 @@
+.earn-section {
+    max-width: 1351px;
+    width: 100%;
+    margin: 0 auto 96px;
+    padding: 89px 0 83px;
+    background: var(--gr-a);
+    border-radius: 44px 44px 0 0;
+
+    &__wrapp {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__box {
+        padding: 43px 48px;
+        background-color: var(--white);
+        border-radius: 24px;
+        filter: drop-shadow(22.439px 15.707px 44.878px rgba(0, 0, 0, 0.08));
+    }
+}

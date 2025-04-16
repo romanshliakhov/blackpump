@@ -1,0 +1,127 @@
+.services-slider {
+  .swiper {
+    &-wrapper {
+      @include for-desktop {
+        gap: clamp(71px, 5.181vw, 86px);
+      }
+
+      @include desktop {
+        @include for-laptop {
+          gap: clamp(51px, 5vw, 71px);
+        }
+      }
+
+      @include laptop {
+        @include for-tablet {
+          gap: 30px;
+        }
+      }
+
+      @include tablet {
+        gap: clamp(10px, 4.98vw, 51px);
+      }
+
+      @media (max-width: (900px)) {
+        gap: 15px;
+      }
+
+      @include for-small-tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include small-tablet{
+        gap: initial;
+      }
+    }
+
+    &-container {
+      @include small-tablet {
+        overflow: auto;
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+        padding: 0 var(--container-offset);
+      }
+    }
+
+    &-slide {
+        height: auto;
+
+      @include small-tablet {
+        width: 240px;
+      }
+
+      @include mobile {
+        width: 310px;
+      }
+    }
+
+    &-pagination{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        overflow: auto;
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+        padding: 0 var(--container-offset);
+        position: relative;
+        z-index: 1;
+        margin-bottom: 30px;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            border-radius: 5px;
+            background: var(--light-gray);
+            height: 3px;
+            bottom: 0;
+            right: 0;
+            transition: all .2;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @include for-small-tablet{
+            display: none;
+        }
+
+        .custom-bullet{
+            color: var(--grey);
+            font-family: var(--second-family);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-bottom: 10px;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+            padding: 0 9px 10px;
+            transition: all .2s;
+    
+            &::before{
+                position: absolute;
+                content: '';
+                left: 0;
+                border-radius: 5px;
+                background: var(--green-2);
+                height: 3px;
+                bottom: 0;
+                right: 0;
+                opacity: 0;
+                transition: all .2;
+                pointer-events: none;
+            }
+
+
+            &.active{
+                font-weight: 800;
+                color: var(--green);
+            }
+        }
+
+    
+    }
+  }
+}

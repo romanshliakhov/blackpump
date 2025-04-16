@@ -1,0 +1,105 @@
+.modal {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 24px;
+  border-radius: clamp(20px, 1.8229vw, 28px);
+  z-index: 1;
+  max-width: clamp(520px, 32.0964vw, 493px);
+  padding: clamp(24px, 2.6042vw, 40px) clamp(20px, 2.381vw, 64px);
+  width: 91vw;
+  background-color: var(--bg-a);
+  overflow: hidden;
+
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: clamp(20px, 1.5625vw, 24px);
+    width: 100%;
+  }
+
+  &__title{
+    font-weight: 800;
+    font-size: clamp(24px, 1.9531vw, 30px);
+    line-height: 120%;
+  }
+
+  &__subtitle{
+    font-weight: 700;
+    font-size: clamp(22px, 1.9531vw, 30px);
+    line-height: 120%;
+  }
+
+  .main-form{
+
+    &__input{
+      border-radius: 8px;
+    }
+
+    .main-btn{
+      margin-top: 4px;
+    }
+  }
+
+  &__wrapp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 12px;
+    
+    .modal__subtitle{
+      padding-right: 15px;
+    }
+  }
+
+  &__image{
+    display: flex;
+    border-radius: clamp(8px, .7813vw, 12px);
+    overflow: hidden;
+
+    @include for-small-tablet{
+      width: clamp(300px, 28.9063vw, 444px);
+      height: clamp(300px, 24.2188vw, 372px);
+    }
+
+    @include small-tablet{
+      width: 100%;
+      height: clamp(180px, 45.139vw, 260px);
+      order: 2;
+    }
+
+    img,picture{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__inner{
+    padding: clamp(20px, 1.5625vw, 24px);
+    display: grid;
+    grid-gap: 20px clamp(1.3021vw, 2.6042vw, 40px);
+
+    @include for-small-tablet{
+      align-items: center;
+      grid-template-columns: clamp(300px, 28.9063vw, 444px) 1fr;
+    }
+
+    @include small-tablet{
+      grid-template-columns: 100%;
+    }
+  }
+
+  &.info{
+    max-width: clamp(1000px, 78.125vw, 1200px);
+    padding: 0;
+    border-radius: clamp(24px, 1.8229vw, 28px);
+
+
+    .close{
+        top: clamp(15px, 1.237vw, 19px);
+        right: clamp(15px, 1.237vw, 19px);
+    }
+  }
+}

@@ -1,0 +1,268 @@
+.info-section {
+  overflow: hidden;
+  @include for-desktop {
+    margin-bottom: 84px;
+  }
+
+  @include desktop {
+    @include for-tablet {
+      margin-bottom: clamp(50px, 4.9296vw, 70px);
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  .pretitle {
+    @include for-desktop {
+      margin-bottom: 96px;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        margin-bottom: 50px;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    @include for-desktop {
+      gap: 84px;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        gap: clamp(50px, 4.9296vw, 70px);
+      }
+    }
+
+    @include tablet {
+      gap: 50px;
+    }
+
+    .main-btn {
+      align-self: center;
+    }
+
+    & > .image{
+        @include for-small-tablet{
+            display: none;
+        }
+    }
+
+    .image {
+        float: right;
+        margin-bottom: 10px;
+        margin-left: clamp(45px, 3.9437vw, 56px);
+        position: relative;
+        z-index: 1;
+        width: 528px;
+        height: 428px;
+        overflow: hidden;
+        border-radius: 25px;
+        z-index: 5;
+
+        &::before {
+          position: absolute;
+          content: "";
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='528' height='202' fill='none'%3E%3Crect width='528' height='202' fill='url(%23a)' rx='20'/%3E%3Cdefs%3E%3ClinearGradient id='a' x1='271.295' x2='268.814' y1='56.986' y2='202.082' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D9D9D9' stop-opacity='0'/%3E%3Cstop offset='.385' stop-color='%23595959' stop-opacity='.3'/%3E%3Cstop offset='1' stop-opacity='.7'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+          background-position: top center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1;
+          height: 250px;
+
+          @include desktop {
+            @include for-tablet {
+              height: clamp(144px, 14.2254vw, 202px);
+            }
+          }
+
+          @include tablet {
+            @include for-mobile {
+              height: 144px;
+            }
+          }
+
+          @include mobile {
+            height: 134px;
+          }
+        }
+
+        img {
+            margin: 0;
+          width: 100%;
+          height: 100%;
+
+          @include small-tablet {
+            @include for-mobile {
+              object-position: top center;
+            }
+          }
+        }
+
+        span {
+          color: var(--white);
+          font-family: var(--second-family);
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 33px;
+          border-radius: 49px;
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 1.235px 1.235px 1.235px 0px rgba(255, 255, 255, 0.3) inset;
+          backdrop-filter: blur(19.764001846313477px);
+          height: 80px;
+          position: absolute;
+          z-index: 3;
+          bottom: 25px;
+          left: clamp(21px, 2.1127vw, 30px);
+          right: clamp(21px, 2.1127vw, 30px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          @include desktop {
+            @include for-tablet {
+              height: clamp(46px, 4.5775vw, 65px);
+              border-radius: clamp(28px, 2.8169vw, 40px);
+              background: rgba(255, 255, 255, 0.2);
+              box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.3) inset;
+              backdrop-filter: blur(16px);
+              font-size: clamp(19px, 26px, 26px);
+              line-height: 76.923%;
+              bottom: clamp(15px, 1.4085vw, 20px);
+            }
+          }
+
+          @include tablet {
+            @include for-mobile {
+              height: 46px;
+              border-radius: 28px;
+              background: rgba(255, 255, 255, 0.2);
+              box-shadow: 0.711px 0.711px 0.711px 0px rgba(255, 255, 255, 0.3)
+                inset;
+              backdrop-filter: blur(11.377774238586426px);
+              font-size: 18.489px;
+              line-height: 76.923%;
+              left: 21px;
+              right: 21px;
+              bottom: 15px;
+            }
+          }
+
+          @include mobile {
+            bottom: 13px;
+            left: 20px;
+            right: 20px;
+            font-size: 17px;
+            line-height: 13.258px;
+            border-radius: 27px;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0.663px 0.663px 0.663px 0px rgba(255, 255, 255, 0.3)
+              inset;
+            backdrop-filter: blur(10.606061935424805px);
+            height: 43px;
+          }
+        }
+
+        @include desktop {
+          @include for-tablet {
+            margin-left: clamp(32px, 3.169vw, 45px);
+            width: clamp(375px, 37.1831vw, 528px);
+            height: clamp(304px, 30.1408vw, 428px);
+            border-radius: clamp(14px, 1.4085vw, 20px);
+          }
+        }
+
+        @include tablet {
+          @include for-mobile {
+            margin-left: 32px;
+            width: 375px;
+            height: 304px;
+            border-radius: 14px;
+          }
+        }
+
+        @include small-tablet {
+          float: initial;
+          margin: -20px 0 0;
+          width: 100%;
+          height: clamp(284px, 52.083vw, 450px);
+          border-radius: 13px;
+        }
+      }
+
+    .editor {
+      max-height: 438px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      @include desktop {
+        @include for-tablet {
+          max-height: calc(clamp(304px, 30.1408vw, 428px) + 10px);
+        }
+      }
+
+      @include tablet {
+        @include for-mobile {
+          max-height: 314px;
+        }
+      }
+
+      @include small-tablet {
+        max-height: 350px;
+      }
+
+      .image{
+        @include small-tablet{
+            display: none;
+        }
+      }
+      
+
+      &__open {
+        z-index: 3;
+        position: relative;
+        height: 24px;
+        margin-top: -24px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &::before {
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 40%
+          );
+          position: absolute;
+          content: "";
+          z-index: -1;
+          left: 0;
+          bottom: 0;
+          height: 100px;
+          pointer-events: none;
+          width: 100vw;
+
+          @include small-tablet{
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+}

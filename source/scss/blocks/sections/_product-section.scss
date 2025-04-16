@@ -1,0 +1,100 @@
+.product-section{
+    padding-bottom: clamp(50px, 5.8333vw, 84px);
+    overflow: hidden;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(40px, 4.1667vw, 60px);
+    }
+
+    &__wrapp{
+        display: grid;
+        grid-template-columns: clamp(300px, 23.75vw, 342px) 1fr;
+        grid-gap: clamp(20px, 1.6667vw, 24px);
+
+        @include tablet{
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__aside{
+        position: relative;
+        z-index: 15;
+
+        @include for-tablet{
+            display: contents;
+
+            .product-section__title{
+                display: none;
+            }
+        }
+
+        @include tablet{
+            position: absolute;
+            top: calc(100% + 10px);
+             right: 0;
+             background: var(--bg-a);
+             z-index: 15;
+             min-width: 280px;
+             padding: 32px 18px;
+            transform: translateX(120%);
+            display: flex;
+            flex-direction: column;
+            grid-gap: 20px;
+            transition: all .2s;
+            box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+
+             &.active{
+                transform: translate(0);
+             }
+         }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+
+        .product-list{
+           min-height: calc(342px * 2);
+        }
+    }
+
+    &__filter{
+        display: flex;
+        grid-gap: clamp(20px, 1.7361vw, 25px);
+        position: relative;
+
+        @include for-tablet{
+            flex-direction: column;
+
+            .filter-btn{
+                display: none;
+            }
+        }
+
+        @include tablet{
+            justify-content: space-between;
+        }
+    }
+
+    &__choice{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(14px, 1.0417vw, 15px);
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(24px, 2.0833vw, 30px);
+        color: var(--cl-b);
+    }
+
+    & + .cta-section{
+        & + .info-section{
+            margin-top: clamp(30px, 4.1667vw, 60px);
+          }
+    }
+}

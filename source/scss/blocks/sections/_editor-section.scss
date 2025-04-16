@@ -1,0 +1,357 @@
+.editor-section {
+  margin-bottom: 120px;
+  overflow: hidden;
+
+  @include desktop {
+    margin-bottom: clamp(68px, 7.0423vw, 100px);
+  }
+
+  @include tablet{
+    margin-bottom: clamp(50px, 6.641vw, 68px);
+  }
+
+  .container{
+    @include mobile{
+      padding: 0 30px;
+    }
+  }
+
+  .editor{
+    h1{
+      color: var(--grey);
+      text-align: center;
+      font-family: var(--second-family);
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 62px;
+      margin-bottom: 84px;
+
+      @include desktop{
+        @include for-tablet{
+          font-size: clamp(32px, 3.5211vw, 50px);
+          line-height: 120%;
+          margin-bottom: 70px;
+        }
+      }
+
+      @include tablet{
+        font-size: 32px;
+
+        @include for-mobile{
+          margin-bottom: 50px;
+          line-height: 93.75%;
+        }
+      }
+
+      @include mobile{
+        margin-bottom: 40px;
+        line-height: 30px;
+        text-align: start;
+      }
+    }
+
+    h2{
+      color: var(--grey);
+      font-family: var(--second-family);
+      font-size: 29.565px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36.957px;
+      margin-bottom: 20px;
+
+      @include desktop{
+        @include for-tablet{
+          font-size: clamp(20px, 1.6901vw, 24px);
+          line-height:  125%;
+        }
+      }
+
+      @include tablet{
+        @include for-mobile{
+          font-size: 20px;
+          margin-bottom: 25px;
+          line-height: 21.333px;
+        }
+      }
+
+      @include mobile{
+        font-size: 21px;
+        line-height: 25px;
+      }
+    }
+
+    h3{
+      color: var(--grey);
+      font-family: var(--second-family);
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36.087px;
+      margin-bottom: 30px;
+
+      @include desktop{
+        @include for-tablet{
+          font-size: clamp(20px, 1.6901vw, 24px);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 125%;
+        }
+      }
+
+      @include tablet{
+        @include for-mobile{
+          font-size: 20px;
+          line-height: 21.333px;
+          margin-bottom: 17px;
+        }
+      }
+
+      @include mobile{
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 25px;
+      }
+    }
+
+    h4,h5,h6{
+      color: var(--grey);
+      font-family: var(--second-family);
+      font-size: 19.71px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 29.565px;
+      margin-bottom: 30px;
+
+      @include desktop{
+        @include for-tablet{
+          font-size: clamp(14px, 1.1268vw, 16px);
+          line-height: 150%; 
+        }
+      }
+
+      @include tablet{
+        margin-bottom: 20px;
+        @include for-mobile{
+          font-size: 14px;
+          line-height: 17.067px;
+        }
+      }
+
+      @include mobile{
+       font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    ul{
+      @include tablet{
+        margin-bottom: 20px;
+      }
+    }
+
+    .image{
+      float: left;
+      position: relative;
+      z-index: 1;
+      width: clamp(624px, 42.69vw, 730px);
+      height: 377px;
+      border-radius: 17px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-right: clamp(35px, 3.275vw, 56px);
+      
+      &::before{
+        position: absolute;
+        z-index: 1;
+        content: '';
+        border-radius: inherit;
+        inset: 0;
+        opacity: 0.2;
+        background: #779684;
+        pointer-events: none;
+      }
+
+      @include desktop{
+        @include for-laptop{
+          height: 322px;
+        }
+
+        @include for-tablet{
+          margin-right: clamp(25px, 2.4648vw, 35px);
+          border-radius: clamp(10px, .9859vw, 14px);
+          width: clamp(444px, 43.9437vw, 624px);
+          
+        }
+      }
+
+      @include laptop{
+        @include for-tablet{
+          height: clamp(229px, 22.6761vw, 322px);
+        }
+      }
+
+      @include tablet{
+        @include for-mobile{
+          margin-right: clamp(10px, 2.441vw, 25px);
+          border-radius: 10px;
+          width: clamp(380px, 43.359vw, 444px);
+          height: 229px; 
+        }
+      }
+
+      @include small-tablet{
+        height: clamp(181px, 45.573vw, 350px);
+        margin-bottom: 30px;
+
+        @include for-mobile{
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+
+      @include mobile{
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+      }
+
+      @include ios{
+        border-radius: 14px;
+        height: 181px;
+      }
+
+      picture,img,video{
+        width: 100%;
+        height: 100%;
+      }
+
+      span{
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 3;
+
+        color: var(--white);
+        font-family: var(--second-family);
+        font-size: 18.478px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 24.638px;
+        padding: 13px 34px;
+        border-radius: 49px;
+        background: rgba(255, 255, 255, 0.20);
+        box-shadow: 1.232px 1.232px 1.232px 0px rgba(255, 255, 255, 0.30) inset;
+        backdrop-filter: blur(19.71014404296875px);
+
+        @include desktop{
+          @include for-tablet{
+            border-radius: clamp(28px, 2.8169vw, 40px);
+            box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.30) inset;
+            backdrop-filter: blur(16px);
+            padding: 12px 27px;
+            left: clamp(14px, 1.4085vw, 20px);
+            top: clamp(14px, 1.4085vw, 20px);
+            font-size: clamp(11px, 1.0563vw, 15px);
+            font-style: normal;
+            font-weight: 800;
+            line-height: 133.333%;
+          }
+        }
+  
+        @include tablet{
+          @include for-mobile{
+            left: 14px;
+            top: 14px;
+            border-radius: 28px;
+            box-shadow: 0.711px 0.711px 0.711px 0px rgba(255, 255, 255, 0.30) inset;
+            backdrop-filter: blur(11.377778053283691px);
+            padding: 8px 19px;
+            font-size: 10.667px;
+            line-height: 14.222px;
+          }
+        }
+  
+        @include mobile{
+          left: 10px;
+          top: 10px;
+          font-size: 15px;
+          line-height: 20px;
+          border-radius: 40px;
+          box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.30) inset;
+          backdrop-filter: blur(16px);
+          padding: 10px 16px;
+        }
+      }
+    }
+
+    a{
+      color: var(--grey);
+      font-family: var(--second-family);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 26px;
+      text-decoration: underline;
+      transition: all .3s;
+
+      &:hover{
+        color: var(--green);
+      }
+
+      @include desktop{
+        @include for-tablet{
+          font-size: clamp(12px, 1.1268vw, 16px);
+          line-height: 150%; 
+        }
+      }
+
+      @include tablet{
+        @include for-mobile{
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      @include mobile{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+      }
+    }
+   
+    p{
+      color: var(--grey);
+      font-family: var(--second-family);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 26px;
+      margin-bottom: clamp(20px, 2.1127vw, 30px);
+
+      @include desktop{
+        @include for-tablet{
+          font-size: clamp(12px, 1.1268vw, 16px);
+          line-height: 150%; 
+        }
+      }
+
+      @include tablet{
+        @include for-mobile{
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      @include mobile{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+

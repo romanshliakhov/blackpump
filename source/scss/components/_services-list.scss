@@ -1,0 +1,50 @@
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include for-desktop {
+    gap: clamp(71px, 5.181vw, 86px);
+  }
+
+  @include desktop {
+    @include for-laptop {
+      gap: clamp(51px, 5vw, 71px);
+    }
+  }
+
+  @include laptop {
+    @include for-tablet {
+      gap: 30px;
+    }
+  }
+
+  @include tablet {
+    gap: clamp(10px, 4.98vw, 51px);
+  }
+
+  @media (max-width: (900px)) {
+    gap: 15px;
+  }
+
+  @include small-tablet{
+    overflow: auto;
+    width: calc(100% + (var(--container-offset) * 2));
+    margin-left: calc(var(--container-offset) * -1);
+    padding: 0 var(--container-offset);
+  }
+
+  @include mobile {
+    gap: 10px;
+  }
+
+
+  &__item{
+    @include small-tablet{
+        width: 230px;
+    }
+
+    @include mobile{
+        width: 310px;
+    }
+  }
+}

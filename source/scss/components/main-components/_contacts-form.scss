@@ -1,0 +1,171 @@
+.contacts-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  grid-gap: clamp(10px, 0.8451vw, 12px) clamp(41px, 3.4507vw, 49px);
+
+  @include desktop {
+    @include for-mobile {
+      grid-gap: clamp(7px, 0.7042vw, 10px) clamp(29px, 2.8873vw, 41px);
+    }
+  }
+
+  @include mobile {
+    gap: 10px;
+    grid-template-columns: 100%;
+  }
+
+  &__label {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(5px, 0.493vw, 7px);
+
+    @include desktop {
+      @include for-mobile {
+        grid-gap: clamp(2.5px, 0.3521vw, 5px);
+      }
+    }
+
+    @include mobile {
+      gap: 5px;
+    }
+
+    &:last-of-type {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(12px, 0.9859vw, 14px);
+    color: var(--white);
+    opacity: 0.6;
+
+    padding-left: clamp(20px, 1.6901vw, 24px);
+
+    @include desktop {
+      @include for-mobile {
+        padding-left: clamp(14px, 1.4085vw, 20px);
+        font-size: clamp(10px, 0.8451vw, 12px);
+      }
+    }
+
+    @include mobile {
+      font-size: 12px;
+      padding-left: 10px;
+    }
+  }
+
+  .main-btn {
+    grid-column: 1/-1;
+    margin-top: clamp(20px, 1.9718vw, 28px);
+
+    @include desktop{
+        @include for-mobile{
+          margin-top: clamp(14px, 1.4085vw, 20px);
+        }
+    }
+
+    @include mobile{
+        justify-self: center;
+    }
+
+    &:hover {
+      span {
+        color: var(--white);
+      }
+    }
+  }
+
+  &__area {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.2676vw, 18px);
+    color: var(--white);
+    line-height: 1;
+    background: transparent;
+    transition: all 0.3s;
+    border: 1px solid var(--br-a);
+    border-radius: clamp(10px, .8451vw, 12px);
+    max-height: clamp(37px, 3.0986vw, 44px);
+    padding: 10px clamp(20px, 1.6901vw, 24px) 9px;
+    line-height: 18px;
+     
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include desktop{
+        font-size: clamp(12px, 1.1268vw, 16px);
+        padding: 4px clamp(14px, 1.4085vw, 20px);
+        max-height: clamp(26px, 2.6056vw, 37px);
+
+        @include for-mobile{
+            border-radius: clamp(7px, .7042vw, 10px);
+        }
+    }
+
+    @include mobile{
+        max-height: 37px;
+        padding: 4px 10px;
+    }
+
+    &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(16px, 1.2676vw, 18px);
+        color: var(--white);
+    }
+
+    &:focus {
+      border-color: var(--white);
+    }
+  }
+
+  &__input {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 4px clamp(20px, 1.6901vw, 24px);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.2676vw, 18px);
+    color: var(--white);
+    transition: all 0.3s;
+    border: 1px solid var(--br-a);
+    border-radius: clamp(10px, .8451vw, 12px);
+    height: clamp(35px, 2.9577vw, 42px);
+
+    @include desktop{
+        font-size: clamp(12px, 1.1268vw, 16px);
+        padding: 4px clamp(14px, 1.4085vw, 20px);
+        height: clamp(25px, 2.4648vw, 35px);
+        
+        @include for-mobile{
+            border-radius: clamp(7px, .7042vw, 10px);
+        }
+    }
+
+    @include mobile{
+        height: 35px;
+        padding: 4px 10px;
+    }
+
+    &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(16px, 1.2676vw, 18px);
+        color: var(--white);
+    }
+
+    &:focus {
+      border-color: var(--white);
+    }
+  }
+}

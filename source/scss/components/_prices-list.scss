@@ -1,0 +1,26 @@
+.prices-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(71px, 6.0563vw, 86px);
+
+    @include desktop{
+        gap: clamp(50px, 5vw, 71px);
+    }
+
+    @include tablet{
+        gap: clamp(10px, 3.5211vw, 50px);
+    }
+
+    @include small-tablet{
+        overflow-y: auto;
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+        padding: 0 var(--container-offset);
+    }
+
+    &__item{
+        @include small-tablet{
+            width: 307px;
+        }
+    }
+}

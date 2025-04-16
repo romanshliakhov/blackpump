@@ -1,0 +1,42 @@
+.services-section{
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    @include desktop{
+        @include for-tablet{
+        margin-bottom: clamp(70px, 9.3333vw, 112px);
+        }
+    }
+
+    @include tablet{
+        margin-bottom: clamp(58px, 6.836vw, 70px);
+    }
+
+    
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: 84px;
+
+        @include desktop{
+            @include for-tablet{
+                gap: clamp(50px, 5.8333vw, 70px);
+            }
+        }
+    
+        @include tablet {
+            gap: 50px;
+        }
+
+        @include mobile{
+            gap: 30px;
+        }
+
+        .services-nav{
+            @include for-mobile{
+                display: none;
+            }
+        }
+    }
+}

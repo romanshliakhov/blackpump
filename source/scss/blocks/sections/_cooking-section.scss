@@ -1,0 +1,18 @@
+.cooking-section{
+    margin-bottom: clamp(35px, 4.1667vw, 60px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 4.1667vw, 60px);
+
+        .main-top{
+           align-items: center;
+           text-align: center; 
+        }
+    }
+
+    & + .news-section{
+        margin-top: calc(clamp(35px, 4.1667vw, 60px) * -1);
+    }
+}

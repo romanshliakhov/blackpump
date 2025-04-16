@@ -1,0 +1,26 @@
+.news-list {
+  display: grid;
+  grid-gap: clamp(70px, 6.1268vw, 87px) clamp(67px, 5.8451vw, 83px);
+
+  @include desktop {
+    @include for-tablet {
+      gap: clamp(50px, 4.9296vw, 70px) clamp(48px, 4.7183vw, 67px);
+    }
+  }
+
+  @include for-tablet{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet {
+    gap: clamp(20px, 4.878vw, 50px) clamp(30px, 4.683vw, 48px);
+
+    @include for-mobile{
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+  }
+
+  @include mobile{
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  }
+}

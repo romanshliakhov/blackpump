@@ -1,0 +1,62 @@
+:root {
+  // --------------- default global variables ---------------
+  // --error-bg: #d01f1f;
+  --body-bg: #fff;
+  --body-font-size: 16px;
+  --content-width: 1170px;
+  --container-offset: clamp(16px, 1.6667vw, 24px);
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // --------------- default scroll variables ---------------
+  // --scrollbar-thumb: #6c947c;
+  // --scrollbar-track: rgba(0, 0, 0, 0.18);
+  // --scrollbar-track-hover: transparent;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+    // --------------- default JS variables ---------------
+    --header-height: 160px;
+ 
+    @include tablet{
+      --header-height: 84px;
+    }
+
+    @include small-tablet{
+      --header-height: 76px;
+    }
+
+  // --------------- default font-family variables ---------------
+  --font-family: "PT-Sans", sans-serif; // var(--font-family);
+  --second-family: "Inter", sans-serif; // var(--second-family);
+  --third-family: "Montserrat", sans-serif; // var(--third-family);
+  --font3:  "DM-Sans", sans-serif; // var(--font3);
+  --font4:  "Ubuntu", sans-serif; // var(--font4);
+
+   // --------------- default color variables ---------------
+   --white: #ffffff; // var(--white);
+   --black: #000000; // var(--black);
+   --grey: #3A3E45; // var(--grey);
+   --blue: #4875FF; // var(--blue);
+   --light-blue: #E5EBFF; // var(--light-blue);
+
+   
+  // --------------- default text color variables ---------------
+  --cl-a: #ffffff; // var(--cl-a);
+  --cl-b: #000000; // var(--cl-b);
+  --cl-c: #4875FF; // var(--cl-c);
+  --cl-d: #2C2C2C; // var(--cl-d);
+  --cl-e: #6A737E; // var(--cl-e);
+
+ 
+
+  // --------------- default border color variable ---------------
+  --br-a: #3A3E45; // var(--br-a);
+  --br-b: #CCD7FF; // var(--br-b);
+  --br-c: #E6EAF5; // var(--br-c);
+  --br-d: #ffffff; // var(--br-d);
+
+ // --------------- gradients bg ---------------
+  --gr-a: linear-gradient(180deg, #E6EAF5 0%, rgba(230, 234, 245, 0.00) 100%); // var(--gr-a);
+  --gr-b: linear-gradient(90deg, #24376F 0.15%, #BBCCED 133.51%); // var(--gr-b);
+}       
+
+

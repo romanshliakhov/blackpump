@@ -1,0 +1,58 @@
+.more-section {
+  @include for-desktop {
+    margin-bottom: 120px;
+  }
+
+  @include desktop {
+    @include for-tablet {
+      margin-bottom: clamp(70px, 8.3333vw, 100px);
+    }
+  }
+
+  @include tablet {
+    margin-bottom: clamp(50px, 6.836vw, 70px);
+  }
+
+  @media (min-width: (1700px)) {
+    .container {
+      max-width: calc(1558px + (var(--container-offset) * 2));
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    @include for-desktop {
+      gap: 84px;
+    }
+
+    @include desktop {
+      gap: clamp(30px, 4.883vw, 50px);
+    }
+
+    .main-btn {
+      align-self: center;
+
+      @include mobile{
+        display: none;
+      }
+    }
+
+    .accordion {
+      padding: 0;
+
+      &__btn {
+        color: var(--green);
+
+        svg {
+          transform: scaleY(1);
+        }
+      }
+
+      &__item {
+        border-color: var(--light-gray);
+      }
+    }
+  }
+}

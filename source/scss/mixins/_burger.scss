@@ -1,0 +1,83 @@
+@mixin burger {
+  --burger-width: 28px;
+  --burger-height: 20px;
+  --burger-line-height: 4px;
+
+  position: relative;
+  border: none;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--burger-line-height);
+    background: var(--green);
+    transform-origin: left top;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s, background 0.3s ease-in-out;
+    border-bottom-right-radius: 25px;
+  }
+
+  &::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    left: 0;
+    width: 50%;
+    transform: translateX(0%);
+    bottom: 0;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 80%;
+    height: var(--burger-line-height);
+    background: var(--green);
+    transform: translate(0, -50%);
+    transition: transform 0.25s ease-in-out, opacity 0.3s ease-in-out, background 0.3s ease-in-out;
+    border-bottom-right-radius: 25px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.active {
+    &::before {
+      border-radius: 0;
+      height: 2px;
+      background: var(--white);
+      top: 50%;
+      transform: rotate(45deg) translate(-50%, -50%);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      height: 2px;
+      background: var(--white);
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      border-radius: 0;
+      transform: rotate(-45deg) translate(-50%, -50%);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    .burger__line {
+      background: var(--white);
+      transform: scale(0) translateY(20%);
+      opacity: 0;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,311 @@
+.news-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include desktop {
+    @include for-tablet {
+      gap: clamp(7px, 0.7042vw, 10px);
+    }
+  }
+
+  @include tablet {
+    @include for-mobile {
+      gap: 7px;
+    }
+  }
+
+  @include mobile {
+    gap: 10px;
+  }
+
+  &__top {
+    height: clamp(180px, 15.6338vw, 222px);
+    width: 100%;
+    border-radius: clamp(14px, 1.1972vw, 17px);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    @include desktop {
+      @include for-tablet {
+        border-radius: clamp(10px, 0.9859vw, 14px);
+        height: clamp(128px, 12.6761vw, 180px);
+      }
+    }
+
+    @include tablet {
+      @include for-mobile {
+        border-radius: 10px;
+        height: 128px;
+      }
+    }
+
+    @include mobile {
+      border-radius: 13px;
+      height: 161px;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    z-index: 3;
+    bottom: clamp(10px, 0.9155vw, 13px);
+    right: clamp(10px, 0.9155vw, 13px);
+    border-radius: 49px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 1.232px 1.232px 1.232px 0px rgba(255, 255, 255, 0.3) inset;
+    backdrop-filter: blur(19.71014404296875px);
+    padding: 15px 36px;
+    color: var(--white);
+    text-align: center;
+    font-family: var(--second-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+
+    @include desktop {
+      @include for-tablet {
+        bottom: clamp(6px, 0.7042vw, 10px);
+        right: clamp(7px, 0.7042vw, 10px);
+        padding: clamp(8px, 0.8451vw, 12px) clamp(18px, 2.0423vw, 29px);
+        font-size: clamp(11.5px, 1.0563vw, 15px);
+        line-height: 133.333%;
+        border-radius: clamp(28px, 2.8169vw, 40px);
+        box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.3) inset;
+        backdrop-filter: blur(16px);
+      }
+    }
+
+    @include tablet {
+      @include for-mobile {
+        right: 6px;
+        bottom: 7px;
+        padding: 8px 18px;
+        font-size: 11.38px;
+        line-height: 125%;
+        border-radius: 28px;
+        box-shadow: 0.711px 0.711px 0.711px 0px rgba(255, 255, 255, 0.3) inset;
+        backdrop-filter: blur(11.377787590026855px);
+      }
+    }
+
+    @include mobile {
+      right: 9px;
+      bottom: 9px;
+      padding: 12px 18px 11px;
+      font-size: 14px;
+      line-height: 16px;
+      border-radius: 36px;
+      box-shadow: 0.896px 0.896px 0.896px 0px rgba(255, 255, 255, 0.3) inset;
+      backdrop-filter: blur(14.335260391235352px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__box {
+    background: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    border-radius: clamp(14px, 1.1972vw, 17px);
+    overflow: hidden;
+    gap: clamp(20px, 1.6901vw, 24px);
+    padding: 26px 37px 24px;
+    transition: all 0.3s;
+
+    @include desktop {
+      @include for-tablet {
+        border-radius: clamp(10px, 0.9859vw, 14px);
+        gap: clamp(15px, 1.4085vw, 20px);
+        padding: clamp(15px, 1.4085vw, 20px) clamp(22px, 2.1127vw, 30px)
+          clamp(14px, 1.4085vw, 20px);
+      }
+    }
+
+    @include tablet {
+      @include for-mobile {
+        border-radius: 10px;
+        gap: 15px;
+        padding: 15px 22px 14px;
+      }
+    }
+
+    @include mobile {
+      gap: 20px;
+      border-radius: 13px;
+      padding: 27px;
+    }
+  }
+
+  p {
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144.444%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    @include desktop {
+      @include for-tablet {
+        font-size: clamp(12px, 1.1268vw, 16px);
+        line-height: 150%;
+      }
+    }
+
+    @include tablet {
+      @include for-mobile {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 133.333%;
+      }
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: 17.246px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29.565px;
+    transition: all 0.3s;
+
+    @include desktop {
+      @include for-tablet {
+        font-size: clamp(10px, 0.9859vw, 14px);
+        line-height: 171.429%;
+        gap: 6px;
+      }
+    }
+
+    @include tablet {
+      @include for-mobile {
+        gap: 4px;
+        font-size: 9.956px;
+        line-height: 171.429%;
+      }
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+      gap: 5px;
+    }
+
+    svg,
+    img {
+      width: auto;
+      height: 16px;
+      margin-bottom: -2px;
+
+      @include desktop {
+        @include for-tablet {
+          height: clamp(9px, 0.9155vw, 13px);
+        }
+      }
+
+      @include tablet {
+        @include for-mobile {
+          height: 9px;
+        }
+      }
+
+      @include mobile {
+        height: 12px;
+      }
+    }
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+
+  &__title {
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 128.882%;
+    margin-bottom: 1px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    @include desktop {
+      @include for-tablet {
+        font-size: clamp(16px, 1.6901vw, 24px);
+        line-height: 125%;
+        margin-bottom: clamp(19px, 2.1127vw, 30px);
+      }
+    }
+
+    @include tablet {
+      @include for-mobile {
+        font-size: 16px;
+        line-height: 133.333%;
+        margin-bottom: clamp(10px, 1.854vw, 19px);
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 0;
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  &:hover {
+    .news-card__box {
+      @include for-mobile {
+        background: var(--white);
+      }
+
+      @include for-desktop {
+        box-shadow: 0px 6.159px 12.319px 0px rgba(119, 150, 132, 0.3);
+      }
+
+      @include desktop {
+        @include for-tablet {
+          box-shadow: 0px 5px 10px 0px rgba(119, 150, 132, 0.3);
+        }
+      }
+
+      @include tablet {
+        @include for-mobile {
+          box-shadow: 0px 3.556px 7.111px 0px rgba(119, 150, 132, 0.3);
+        }
+      }
+    }
+  }
+}

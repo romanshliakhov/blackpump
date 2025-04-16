@@ -1,0 +1,355 @@
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include for-desktop {
+    gap: 85px;
+  }
+
+  @include desktop {
+    gap: clamp(30px, 4.861vw, 70px);
+  }
+
+  &__fieldset {
+    width: 100%;
+  }
+
+  &__heading {
+    display: block;
+    font-family: var(--second-family);
+    line-height: 125%;
+    font-weight: 700;
+    color: var(--grey);
+
+    @include for-desktop {
+      margin-bottom: 37px;
+      font-size: 28px;
+    }
+
+    @include desktop {
+      margin-bottom: 30px;
+      font-size: clamp(21px, 1.667vw, 24px);
+    }
+
+    @include mobile {
+      padding-left: 10px;
+    }
+  }
+
+  &__descr {
+    display: block;
+    font-family: var(--second-family);
+    line-height: normal;
+    color: rgba(48, 48, 48, .6);
+
+    @include for-desktop {
+      margin-top: 50px;
+      font-size: 18px;
+    }
+
+    @include desktop {
+      margin-top: clamp(20px, 2.778vw, 40px);
+      font-size: 16px;
+    }
+  }
+
+  &__labels {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(10px, 2.083vw, 30px);
+  }
+
+  &__label {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include for-tablet {
+      grid-column: span 3;
+    }
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    &[for="from-index"],
+    &[for="from-address"],
+    &[for="for-index"],
+    &[for="for-address"] {
+      @include for-mobile{
+        grid-column: span 6;
+      }
+
+      @include mobile{
+        grid-column: span 12;
+      }
+    }
+
+    &[for="name"],
+    &[for="email"],
+    &[for="tel"],
+    &[for="date"] {
+      @include mobile{
+        grid-column: span 12;
+      }
+    }
+
+    &-heading {
+      font-family: var(--second-family);
+      line-height: 100%;
+      font-weight: 400;
+      color: rgba(116, 116, 116, .6);
+
+      @include for-desktop {
+        padding-left: 25px;
+        font-size: 14px;
+      }
+
+      @include desktop {
+        padding-left: clamp(10px, 2.604vw, 20px);
+        font-size: clamp(11px, 1.563vw, 12px);
+      }
+    }
+
+    &-text {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      font-family: var(--second-family);
+      line-height: 100%;
+      font-weight: 400;
+      color: var(--grey-3);
+
+      @include for-desktop {
+        right: 25px;
+        height: 43px;
+        font-size: 20px;
+      }
+
+      @include desktop {
+        right: clamp(10px, 1.389vw, 20px);
+        height: 35px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__select{
+    border: 1px solid rgba(203, 203, 203, .4);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    line-height: 100%;
+    font-weight: 400;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background-image: none;
+
+    @include for-desktop {
+      padding: 0 25px;
+      height: 43px;
+      font-size: 18px;
+    }
+
+    @include desktop {
+      padding: 0 clamp(10px, 1.389vw, 20px);
+      height: 35px;
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-family: var(--second-family);
+      font-size: 18px;
+      line-height: 100%;
+      font-weight: 400;
+      color: rgba(116, 116, 116, .6);
+
+      @include for-desktop {
+        font-size: 18px;
+      }
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__input {
+    border: 1px solid rgba(203, 203, 203, .4);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    line-height: 100%;
+    font-weight: 400;
+    appearance: none;  
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    background-image: none; 
+
+    @include for-desktop {
+      padding: 0 25px;
+      height: 43px;
+      font-size: 18px;
+    }
+
+    @include desktop {
+      padding: 0 clamp(10px, 1.389vw, 20px);
+      height: 35px;
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-family: var(--second-family);
+      font-size: 18px;
+      line-height: 100%;
+      font-weight: 400;
+      color: rgba(116, 116, 116, .6);
+
+      @include for-desktop {
+        font-size: 18px;
+      }
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__calendar-btn {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include for-desktop {
+      right: 25px;
+      height: 43px;
+    }
+
+    @include desktop {
+      right: clamp(10px, 1.389vw, 20px);
+      height: 35px;
+    }
+  }
+
+  &__checkbox {
+    width: 100%;
+    position: relative;
+
+    @include for-tablet {
+      grid-column: span 3;
+    }
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    @include mobile{
+      grid-column: span 12;
+    }
+
+    &-input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+
+      &:checked ~ span::before {
+        border: 1px solid var(--green);
+        background-color: var(--green);
+      }
+    }
+
+    &-heading {
+      position: relative;
+      padding-left: 25px;
+      font-family: var(--second-family);
+      font-size: 16px;
+      line-height: normal;
+      font-style: normal;
+      font-weight: 400;
+      word-break: break-word;
+      cursor: pointer;
+      color: var(--grey);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2.5px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        border: 1px solid var(--cl-c);
+        transition: 0.2s ease;
+      }
+    }
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 1px solid rgba(203, 203, 203, .4);
+    border-radius: 10px;
+
+    @include for-desktop {
+      height: 110px;
+      padding: 10px 25px;
+      font-size: 18px;
+    }
+
+    @include desktop {
+      height: clamp(70px, 6.25vw, 90px);
+      padding: 8px clamp(10px, 1.389vw, 20px);
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-family: var(--second-family);
+      font-size: 18px;
+      line-height: 100%;
+      font-weight: 400;
+      color: rgba(116, 116, 116, .6);
+
+      @include for-desktop {
+        font-size: 18px;
+      }
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__file {
+    position: absolute;
+    top: clamp(10px, 1.953vw, 15px);
+    right: clamp(10px, 1.953vw, 15px);
+    display: flex;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    svg {
+      width: clamp(16px, 3.125vw, 24px);
+      height: clamp(16px, 3.125vw, 24px);
+    }
+
+  }
+}

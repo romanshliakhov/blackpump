@@ -1,0 +1,94 @@
+.info-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.0833vw, 30px);
+
+    &__item{
+        &:nth-child(even){
+            .info-card{
+                &__box{
+                    @include for-small-tablet{
+                        order: 2;
+                        justify-self: start;
+                    }
+                }
+
+                .info-slider{
+                    @include for-small-tablet{
+                        order: 1;
+                        margin: 0 0 0 calc(var(--container-offset) * -1);
+                    }
+                }
+            }
+        }
+    }
+
+    &.counter{
+        counter-reset: li;
+
+        .info-list{
+
+            &__item{
+                counter-increment: li;
+
+                .info-card{
+                    .editor{
+                        h1,h2,h3,h4,h5,h6{
+                            display: inline-flex;
+                           
+                            &::before{
+                                content: counter(li) '.';
+                                display: inline-block;
+                                margin: 0 6px;
+                            }
+
+                            @include small-tablet{
+                                width: 100%;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.reverse{
+        .info-list{
+            &__item{
+                .info-card{
+                    &__box{
+                        @include for-small-tablet{
+                            order: 2;
+                            justify-self: start;
+                        }
+                    }
+    
+                    .info-slider{
+                        @include for-small-tablet{
+                            order: 1;
+                            margin: 0 0 0 calc(var(--container-offset) * -1);
+                        }
+                    } 
+                }
+
+                &:nth-child(even){
+                    .info-card{
+                        &__box{
+                            @include for-small-tablet{
+                                order: 1;
+                            }
+                        }
+        
+                        .info-slider{
+                            @include for-small-tablet{
+                                order: 2;
+                                margin: 0 calc(var(--container-offset) * -1) 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

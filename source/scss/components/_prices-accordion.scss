@@ -1,0 +1,109 @@
+.prices-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__content {
+    z-index: 20;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+  }
+
+  &__item {
+    border-radius: 48px;
+    border: 1px solid var(--green-2);
+    background: var(--light-gray);
+    box-shadow: 0px 4.812px 4.812px 0px #e5e5e5;
+
+    @include desktop{
+        @include for-tablet{
+            border-radius: clamp(28px, 3.3333vw, 40px);
+box-shadow: 0px 4px 4px 0px #E5E5E5;
+        }
+    }
+
+    @include tablet{
+        border-radius: clamp(20px, 2.734vw, 28px);
+        box-shadow: 0px 2.845px 2.845px 0px #E5E5E5;
+    }
+
+    @include mobile{
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px #E5E5E5;
+    }
+  }
+
+  &__btn {
+    padding: 40px 110px 40px 100px;
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 0.3s;
+
+    svg {
+      width: 22px;
+      height: 34px;
+      margin-top: 2px;
+      transition: transform 0.2s;
+      transform: scaleY(-1);
+    }
+
+    @include desktop {
+      @include for-tablet {
+        font-size: clamp(21px, 2vw, 24px);
+        line-height: 125%;
+        padding: clamp(20px, 2.75vw, 33px) clamp(71px, 8.3333vw, 100px) clamp(20px, 2.75vw, 33px) clamp(57px, 6.6667vw, 80px);
+
+        svg {
+          width: clamp(13px, 1.5vw, 18px);
+          height: clamp(20px, 2.3333vw, 28px);
+        }
+      }
+    }
+
+    @include tablet {
+      font-size: 21px;
+      line-height: 25px;
+      padding: 20px clamp(21px, 6.934vw, 71px) 20px clamp(20px, 5.566vw, 57px);
+      svg {
+        width: 13px;
+        height: 20px;
+      }
+    }
+
+    @include mobile {
+        padding: 23px 21px 22px 20px;
+      svg {
+        width: 18px;
+        height: 28px;
+      }
+    }
+
+    &:hover {
+      color: var(--green);
+    }
+
+    &.open {
+      svg {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  @include desktop {
+    @include for-tablet {
+    }
+  }
+
+  @include tablet {
+  }
+}

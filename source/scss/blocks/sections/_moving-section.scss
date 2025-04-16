@@ -1,0 +1,33 @@
+.moving-section{
+    margin-bottom: 120px;
+
+    @include desktop{
+        @include for-tablet{
+        margin-bottom: clamp(70px, 7.0423vw, 100px);
+        }
+    }
+
+    @include tablet{
+        margin-bottom: clamp(50px, 6.836vw, 70px);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: 84px;
+     
+        @include desktop{
+            @include for-tablet{
+                gap: clamp(30px, 3.5211vw, 50px);
+            }
+        }
+    
+          @include tablet {
+            gap: 30px;
+          }
+
+          @include mobile{
+            gap: 36px;
+          }
+    }
+}

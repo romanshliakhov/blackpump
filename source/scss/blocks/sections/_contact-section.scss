@@ -1,0 +1,298 @@
+.contact-section {
+  z-index: 1;
+  position: relative;
+  max-width: 1660px;
+  overflow: hidden;
+
+  @media (min-width: (1706px)) {
+      margin: 0 auto 120px;
+  }
+
+  @media (max-width: (1705px)) {
+      @include for-laptop{
+          margin: 0 30px clamp(70px, 7.0423vw, 100px);
+      }
+  }
+
+  @include laptop{
+    @include for-tablet{
+      margin: 0 var(--container-offset) clamp(70px, 7.0423vw, 100px);
+    }
+  }
+
+  .container{
+    max-width: 100%;
+    padding: 0;
+  }
+
+  @include tablet {
+    margin: 0 var(--container-offset) clamp(50px, 6.836vw, 70px);
+  }
+
+  &__box {
+    gap: 84px;
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        align-self: center;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        gap: clamp(50px, 4.9296vw, 70px);
+      }
+    }
+
+    @include tablet {
+      gap: clamp(30px, 4.883vw, 50px);
+    }
+  }
+
+  &__wrapp{
+    position: relative;
+    z-index: 2;
+    height: fit-content;
+    min-height: 556px;
+    padding: 37px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    background: var(--cl-c);
+
+    @include desktop {
+        @include for-tablet {
+            padding: clamp(21px, 2.1127vw, 30px);
+            border-radius: clamp(14px, 1.4085vw, 20px);
+            min-height: 451px;
+        }
+      }
+  
+      @include tablet {
+        @include for-mobile{
+            padding: 21px 22px 22px;
+            border-radius: 14px;
+            min-height: 321px;
+        }
+      }
+
+      @include mobile{
+        padding: 20px;
+        border-radius: 20px;
+        min-height: 582px;
+      }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include desktop {
+        @include for-tablet {
+          gap: clamp(15px, 1.4085vw, 20px);
+        }
+      }
+
+      @include tablet{
+            gap: clamp(12px, 1.465vw, 15px);
+      }
+  }
+
+  &__time{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 13px;
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .3s;
+
+    svg{
+        grid-column: 1;
+        grid-row: 1/3;
+        width: 25px;
+        flex-shrink: 0;
+        display: flex;
+        height: 25px;
+
+        @include desktop {
+            @include for-tablet {
+                height: 23px;
+                width: 23px;
+                margin-right: -3px;
+            }
+          }
+    
+          @include tablet{
+            @include for-mobile{
+            width: 16px;
+            height: 16px; 
+            }
+            margin-right: -2px;
+          }
+    
+          @include mobile{
+            width: 20px;
+            height: 20px;
+          }
+    }
+
+    b{
+        font-weight: 400;   
+    }
+
+    @include desktop {
+        @include for-tablet {
+            column-gap: 10px;
+            font-size: 18px;
+        }
+      }
+
+      @include tablet{
+            font-size: 13px;
+            column-gap: 7px;
+      }
+
+      @include mobile{
+        font-size: 16px;
+        column-gap: 10px;
+      }
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--grey);
+    font-family: var(--second-family);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .3s;
+
+    svg{
+        flex-shrink: 0;
+        display: flex;
+        width: 25px;
+        height: 25px;
+
+        @include desktop {
+            @include for-tablet {
+                width: 20px;
+                height: 20px;
+            }
+          }
+
+          @include tablet{
+           width: 14px;
+           height: 14px;
+         }
+
+         @include mobile{
+            width: 18px;
+            height: 18px;
+          }
+    }
+
+    &:hover{
+        color: var(--green-2);
+    }
+
+    @include desktop {
+        @include for-tablet {
+            gap: 10px;
+            font-size: 18px;
+        }
+      }
+
+      @include tablet{
+            font-size: 13px;
+            gap: 7px;
+      }
+
+      @include mobile{
+        font-size: 16px;
+        gap: 10px;
+      }
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 637px;
+    height: 100%;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 9.855px 9.855px 0px rgba(116, 140, 126, 0.30);
+    backdrop-filter: blur(9.239130020141602px);
+    padding:  49px 48px 37px;
+    gap: 24px;
+
+    @include desktop {
+        @include for-tablet {
+            gap: clamp(13px, 1.4085vw, 20px);
+            border-radius: 20px;
+            box-shadow: 0px 8px 8px 0px rgba(116, 140, 126, 0.30);
+            backdrop-filter: blur(7.5px);
+            padding: 40px 40px 30px;
+            max-width: 517px;
+        }
+      }
+  
+      @include tablet {
+        @include for-mobile{
+            gap: 13px;
+            max-width: 368px;
+            border-radius: 14px;
+            box-shadow: 0px 5.689px 5.689px 0px rgba(116, 140, 126, 0.30);
+            backdrop-filter: blur(5.333332538604736px);
+            padding: 28px 28px 21px;
+        }
+      }
+
+      @include for-mobile{
+        flex-grow: 1;
+      }
+
+      @include mobile{
+        gap: 30px;
+        max-width: 517px;
+        border-radius: 20px;
+        box-shadow: 0px 8px 8px 0px rgba(116, 140, 126, 0.30);
+        backdrop-filter: blur(7.5px);
+        padding: 20px 20px 30px;
+        min-height: 320px;
+    }
+
+    .main-btn{
+        margin-top: auto;
+
+        @include mobile{
+            min-width: 207px;
+        }
+    }
+  }
+
+  &__map{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    border-radius: inherit;
+
+    img,picture,iframe{
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+  }
+}

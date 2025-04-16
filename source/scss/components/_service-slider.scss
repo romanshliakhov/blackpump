@@ -1,0 +1,126 @@
+.service-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+  position: relative;
+  z-index: 2;
+
+  @include desktop {
+    @include for-tablet {
+      gap: clamp(50px, 4.9296vw, 70px);
+    }
+  }
+
+  @include tablet {
+    gap: 50px;
+  }
+
+  &__content {
+    overflow: hidden;
+
+    @include tablet {
+      padding: 0 5px;
+    }
+
+    @include for-tablet {
+      padding: 0 clamp(6px, 1.3333vw, 16px);
+    }
+  }
+
+  .swiper {
+    &-btn {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+
+      @media (max-width: (1010px)) {
+        display: none;
+      }
+
+      &.next {
+        right: calc(clamp(80px, 5.614vw, 96px) * -1);
+        transform: translate(100%, -50%);
+
+        @include desktop {
+          @include for-tablet {
+            right: calc(clamp(57px, 5.556vw, 80px) * -1);
+          }
+        }
+
+        @include tablet {
+          right: calc(clamp(16px, 5.566vw, 57px) * -1);
+        }
+      }
+
+      &.prev {
+        left: calc(clamp(80px, 5.614vw, 96px) * -1);
+        transform: translate(-100%, -50%);
+
+        @include desktop {
+          @include for-tablet {
+            left: calc(clamp(57px, 5.556vw, 80px) * -1);
+          }
+        }
+
+        @include tablet {
+          left: calc(clamp(16px, 5.566vw, 57px) * -1);
+        }
+      }
+    }
+
+    &-container {
+      width: 100%;
+      overflow: initial;
+
+      @media (max-width: (1010px)) {
+        @media (min-width: (875px)) {
+          width: calc(100% + (var(--container-offset) * 2));
+          margin-left: calc(var(--container-offset) * -1);
+          padding: 0 var(--container-offset);
+        }
+      }
+
+      @media (max-width: (874px)) {
+        padding: 0 var(--container-offset);
+      }
+    }
+
+    &-wrapper {
+      padding: 30px 0;
+    }
+
+    &-slide {
+      height: auto;
+      transition: all 0.3s;
+
+      &-active {
+        // transform: scale(1.1);
+
+        // .reviews-card {
+        //   border-radius: 17px;
+        //   background: var(--white);
+        //   box-shadow: 0px 3.014px 10.029px 0px rgba(119, 150, 132, 0.3);
+
+        //   @include desktop {
+        //     @include for-tablet {
+        //       border-radius: clamp(10px, 0.9859vw, 14px);
+        //       box-shadow: 0px 5px 10px 0px rgba(119, 150, 132, 0.3);
+        //     }
+        //   }
+
+        //   @include tablet {
+        //     @include for-mobile {
+        //       border-radius: 10px;
+        //       box-shadow: 0px 3.556px 7.112px 0px rgba(119, 150, 132, 0.3);
+        //     }
+        //   }
+
+        //   @include mobile {
+        //     border-radius: 11px;
+        //     box-shadow: 0px 3.875px 7.75px 0px rgba(119, 150, 132, 0.3);
+        //   }
+        // }
+      }
+    }
+  }
+}

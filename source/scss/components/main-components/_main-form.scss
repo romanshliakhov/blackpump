@@ -1,0 +1,97 @@
+.main-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-gap: clamp(20px, 2.4306vw, 35px);
+
+  &__label {
+    width: 100%;
+    position: relative;
+
+    .wpcf7-form-control-wrap{
+      width: 100%;
+    }
+  }
+
+  .main-btn {
+   align-self: center;
+
+   @include mobile{
+    width: 100%;
+   }
+  }
+
+  &__mess {
+    border-bottom: solid 1px var(--br-b);
+    height: 40px;
+    display: flex;
+    width: 100%;
+    padding: 6px 11px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(18px, 1.3194vw, 19px);
+    line-height: 139%;
+    color: var(--cl-c);
+    transition: all 0.3s;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(18px, 1.3194vw, 19px);
+      line-height: 139%;
+      color: var(--cl-f);
+    }
+
+    &:focus {
+      border-color: var(--cl-d);
+    }
+  }
+
+  &__input {
+    border-bottom: solid 1px var(--br-b);
+    height: 40px;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 6px 11px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(18px, 1.3194vw, 19px);
+    line-height: 139%;
+    color: var(--cl-c);
+    transition: all 0.3s;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(18px, 1.3194vw, 19px);
+      line-height: 139%;
+      color: var(--cl-f);
+    }
+
+    &:focus {
+      border-color: var(--cl-d);
+    }
+  }
+
+  .wpcf7-response-output{
+    display: none;
+  }
+
+  .wpcf7-not-valid-tip{
+      position: absolute;
+      bottom: 3px;
+      left: clamp(12px, 1.2698vw, 16px);
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 140%;
+  }
+}
+
+.wpcf7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

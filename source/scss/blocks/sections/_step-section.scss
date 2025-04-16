@@ -1,0 +1,29 @@
+.step-section{
+    margin-bottom: 120px;
+
+    @include desktop{
+        @include for-tablet{
+        margin-bottom: clamp(70px, 7.0423vw, 100px);
+        }
+    }
+
+    @include tablet{
+        margin-bottom: clamp(40px, 6.836vw, 70px);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: 124px;
+     
+        @include desktop{
+            @include for-tablet{
+                gap: clamp(50px, 4.8592vw, 69px);
+            }
+        }
+    
+          @include tablet {
+            gap: 55px;
+          }
+    }
+}
