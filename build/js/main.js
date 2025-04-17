@@ -15072,10 +15072,10 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__("./source/js/components/tabs.js");
 /******/ 	__webpack_require__("./source/js/components/textarea.js");
 /******/ 	__webpack_require__("./source/js/components/toTop.js");
+/******/ 	__webpack_require__("./source/js/vendor/swiper.js");
 /******/ 	__webpack_require__("./source/js/functions/customFunctions.js");
 /******/ 	__webpack_require__("./source/js/functions/disable-scroll.js");
 /******/ 	__webpack_require__("./source/js/functions/enable-scroll.js");
-/******/ 	__webpack_require__("./source/js/vendor/swiper.js");
 /******/ 	var __webpack_exports__ = __webpack_require__("./source/js/functions/scripts/check-viewport.js");
 /******/ 	
 /******/ })()

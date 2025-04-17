@@ -42,10 +42,6 @@
     --container-offset: 10px;
   }
 
-  .container{
-    padding: 0;
-  }
-
   @media (max-width: (999px)) {
     padding: 10px 0 20px;
   }
@@ -74,105 +70,6 @@
   //   background: var(--bg-c);
   // }
 
-  &-lang {
-    justify-self: end;
-    display: flex;
-    position: relative;
-    z-index: 1;
-
-    &:hover {
-      .header-lang__wrapp {
-        opacity: 1;
-        visibility: visible !important;
-      }
-
-      .header-lang__open {
-        background: var(--green);
-        color: var(--white);
-
-        svg {
-          transform: scaleY(-1);
-          stroke: var(--white);
-        }
-      }
-    }
-
-    &__open {
-      border-radius: 10px;
-      padding: 10px;
-      gap: 6px;
-      display: flex;
-      align-items: center;
-      transition: all 0.3s;
-      color: var(--grey);
-      font-family: var(--second-family);
-      font-size: clamp(16px, 1.084vw, 18px);
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      
-      
-      @include desktop {
-        font-size: clamp(13px, 1.1268vw, 16px);
-        grid-gap: clamp(4px, 0.4225vw, 6px);
-      }
-
-      svg {
-        transition: transform 0.3s;
-        fill: none;
-        stroke: var(--grey);
-        width: clamp(10px, 0.723vw, 12px);
-        height: clamp(5px, 0.361vw, 8px);
-        flex-shrink: 0;
-
-        @include desktop {
-          width: clamp(7px, .7042vw, 10px);
-          height: clamp(4px, .3521vw, 5px);
-        }
-      }
-    }
-
-    &__btn {
-      color: var(--grey);
-      font-family: var(--second-family);
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      padding: 10px 14px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      transition: all 0.3s;
-      background: var(--light-gray);
-      border-radius: 10px;
-
-      font-size: clamp(16px, 1.084vw, 18px);
-
-      @include desktop {
-        font-size: clamp(13px, 1.1268vw, 16px);
-      }
-
-
-      &:hover {
-        background: var(--green);
-        color: var(--white);
-      }
-    }
-
-    &__wrapp {
-      position: absolute;
-      width: 58px;
-      opacity: 0;
-      right: 0;
-      width: 100%;
-      top: calc(100% + 3px);
-      left: 0;
-      visibility: hidden;
-      transition: 0.2s ease-in-out;
-    }
-  }
-
   &__box {
     display: grid;
     position: relative;
@@ -181,97 +78,7 @@
     gap: clamp(10px, 0.964vw, 16px);
     grid-template-columns: auto 1fr auto;
     justify-content: space-between;
-
     transition: all 0.4s 0.05s;
-
-    @include desktop {
-      @include for-tablet {
-        gap: 10px;
-      }
-    }
-
-    @include tablet {
-      @include for-small-tablet {
-        gap: 10px;
-      }
-    }
-
-    @media (max-width: (999px)) {
-      grid-gap: 19px;
-    }
-
-    .main-btn {
-      height: clamp(36px, 2.59vw, 43px);
-      min-width: clamp(202px, 14.639vw, 243px);
-
-      @include desktop {
-        @include for-tablet {
-          min-width: clamp(156px, 14.2254vw, 202px);
-        }
-      }
-
-      @include tablet {
-        min-width: 156px;
-      }
-
-      &__icon {
-        width: clamp(26px, 1.867vw, 31px);
-        height: clamp(26px, 1.867vw, 31px);
-
-        @include desktop {
-          @include for-tablet {
-            width: clamp(22px, 1.831vw, 26px);
-            height: clamp(22px, 1.831vw, 26px);
-          }
-        }
-
-        @include tablet {
-          width: 22px;
-          height: 22px;
-        }
-
-        svg {
-          width: clamp(11.5px, 0.843vw, 14px);
-          height: clamp(11.5px, 0.843vw, 14px);
-
-          @include desktop {
-            @include for-tablet {
-              width: clamp(10px, 0.8099vw, 11.5px);
-              height: clamp(10px, 0.8099vw, 11.5px);
-            }
-          }
-
-          @include tablet {
-            width: 10px;
-            height: 10px;
-          }
-        }
-      }
-
-      span:not([class]) {
-        font-size: clamp(16px, 1.084vw, 18px);
-
-        @include desktop {
-          @include for-tablet {
-            font-size: clamp(13px, 1.1268vw, 16px);
-          }
-        }
-
-        @include tablet {
-          font-size: 13px;
-        }
-      }
-
-      @include desktop {
-        @include for-tablet {
-          height: clamp(30px, 2.5352vw, 36px);
-        }
-      }
-
-      @include tablet {
-        height: 30px;
-      }
-    }
   }
 
   &__link {
@@ -334,13 +141,6 @@
     display: flex;
     align-items: center;
     z-index: 5;
-
-    @media (min-width: (1000px)){
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
 
     ul {
       display: flex;
@@ -422,5 +222,13 @@
     @media (max-width: (999px)) {
       @include burger;
     }
+  }
+
+
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 }

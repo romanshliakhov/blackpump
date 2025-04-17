@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body class="dashboards">
+  @include('partials/header-dashboard.html')
+
+  <main>
+    <section class="statistics-section">
+      <div class="container">
+        <div class="statistics-section__wrapp">
+          <div class="statistics-section__box">
+            <div class="statistics-section__info">
+              <div class="main-top">
+                <h1 class="statistics-section__title">Статистика наших результатов в реальном времени</h1>
+                <p class="statistics-section__descr">Вы можете смотреть наши транзакции в реальном времени</p>
+
+                <button class="default-btn default-btn--deposite">
+                  Депозит
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-up'></use>
+                  </svg>
+                </button>
+              </div>
+
+              <ul class="statistics-section__profit">
+                <li>
+                  <span>$6,456.44</span>
+                  <p>Прибыль за день</p>
+                </li>
+                <li>
+                  <span>$16,456.00</span>
+                  <p>Прибыль за неделю</p>
+                </li>
+                <li>
+                  <span>$80,506.11</span>
+                  <p>Прибыль за месяц</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="statistics-section__bg">
+              <picture>
+                <source type='image/webp' srcset='img/index/statistics-bg.webp'>
+                <img width='485' height='485' src='img/index/statistics-bg.png' alt='statistics-bg'>
+              </picture>
+            </div>
+          </div>
+
+          <div class="statistics-section__deals">
+            <ul class="last-deals">
+              <li class="last-deals__row">
+                <div class="last-deals__box">
+                  <span class="last-deals__icon">RFC</span>
+
+                  <div class="last-deals__info">
+                    <span class="last-deals__title">Retard Fin... (RFC)</span>
+
+                    <span class="last-deals__status status-start">Запущено</span>
+                  </div>
+                </div>
+
+                <ul class="last-deals__details">
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">Время жизни токена</p>
+                    <span class="last-deals__details-numbers token-lifetime">4м:35с</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">баланс на старте</p>
+                    <span class="last-deals__details-numbers balance-start">32.94 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">в конце сделки</p>
+                    <span class="last-deals__details-numbers balance-end">35.38 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">чистая прибыль</p>
+                    <span class="last-deals__details-numbers balance-profit">+2.44 SOL</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="last-deals__contract">
+                  Посмотреть контракт
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-up-right'></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="last-deals__row">
+                <div class="last-deals__box">
+                  <span class="last-deals__icon">RFC</span>
+
+                  <div class="last-deals__info">
+                    <span class="last-deals__title">Retard Fin... (RFC)</span>
+
+                    <span class="last-deals__status status-done">Отработано</span>
+                  </div>
+                </div>
+
+                <ul class="last-deals__details">
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">Время жизни токена</p>
+                    <span class="last-deals__details-numbers token-lifetime">4м:35с</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">баланс на старте</p>
+                    <span class="last-deals__details-numbers balance-start">32.94 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">в конце сделки</p>
+                    <span class="last-deals__details-numbers balance-end">35.38 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">чистая прибыль</p>
+                    <span class="last-deals__details-numbers balance-profit">+2.44 SOL</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="last-deals__contract">
+                  Посмотреть контракт
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-up-right'></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="last-deals__row">
+                <div class="last-deals__box">
+                  <span class="last-deals__icon">RFC</span>
+
+                  <div class="last-deals__info">
+                    <span class="last-deals__title">Retard Fin... (RFC)</span>
+
+                    <span class="last-deals__status status-done">Отработано</span>
+                  </div>
+                </div>
+
+                <ul class="last-deals__details">
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">Время жизни токена</p>
+                    <span class="last-deals__details-numbers token-lifetime">4м:35с</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">баланс на старте</p>
+                    <span class="last-deals__details-numbers balance-start">32.94 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">в конце сделки</p>
+                    <span class="last-deals__details-numbers balance-end">35.38 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">чистая прибыль</p>
+                    <span class="last-deals__details-numbers balance-profit">+2.44 SOL</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="last-deals__contract">
+                  Посмотреть контракт
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-up-right'></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="last-deals__row">
+                <div class="last-deals__box">
+                  <span class="last-deals__icon">RFC</span>
+
+                  <div class="last-deals__info">
+                    <span class="last-deals__title">Retard Fin... (RFC)</span>
+
+                    <span class="last-deals__status status-done">Отработано</span>
+                  </div>
+                </div>
+
+                <ul class="last-deals__details">
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">Время жизни токена</p>
+                    <span class="last-deals__details-numbers token-lifetime">4м:35с</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">баланс на старте</p>
+                    <span class="last-deals__details-numbers balance-start">32.94 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">в конце сделки</p>
+                    <span class="last-deals__details-numbers balance-end">35.38 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">чистая прибыль</p>
+                    <span class="last-deals__details-numbers balance-profit">+2.44 SOL</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="last-deals__contract">
+                  Посмотреть контракт
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-up-right'></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="last-deals__row">
+                <div class="last-deals__box">
+                  <span class="last-deals__icon">RFC</span>
+
+                  <div class="last-deals__info">
+                    <span class="last-deals__title">Retard Fin... (RFC)</span>
+
+                    <span class="last-deals__status status-done">Отработано</span>
+                  </div>
+                </div>
+
+                <ul class="last-deals__details">
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">Время жизни токена</p>
+                    <span class="last-deals__details-numbers token-lifetime">4м:35с</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">баланс на старте</p>
+                    <span class="last-deals__details-numbers balance-start">32.94 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">в конце сделки</p>
+                    <span class="last-deals__details-numbers balance-end">35.38 SOL</span>
+                  </li>
+                  <li class="last-deals__details-box">
+                    <p class="last-deals__details-heading">чистая прибыль</p>
+                    <span class="last-deals__details-numbers balance-profit">+2.44 SOL</span>
+                  </li>
+                </ul>
+
+                <a href="#" class="last-deals__contract">
+                  Посмотреть контракт
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-up-right'></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <div class="paginations">
+              <a href="#" class="paginations__nav prev">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#arrow-l'></use>
+                </svg>
+              </a>
+
+              <ul class="paginations__items">
+                <li class="paginations__item">
+                  <a href="#" class="paginations__link">1</a>
+                </li>
+                <li class="paginations__item">
+                  <span class="paginations__link active">2</span>
+                </li>
+                <li class="paginations__item">
+                  <a href="#" class="paginations__link">3</a>
+                </li>
+                <li class="paginations__item">
+                  <a href="#" class="paginations__link">4</a>
+                </li>
+                <li class="paginations__item">
+                  <a href="#" class="paginations__link">5</a>
+                </li>
+              </ul>
+
+              <a href="#" class="paginations__nav next">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#arrow-r'></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>

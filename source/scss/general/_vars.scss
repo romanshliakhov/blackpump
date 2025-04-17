@@ -6,6 +6,7 @@
   --content-width: 1170px;
   --container-offset: clamp(16px, 1.6667vw, 24px);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --dashboadrd-bg: #F1F5FF; // var(--dashboadrd-bg);
 
   // --------------- default scroll variables ---------------
   // --scrollbar-thumb: #6c947c;
@@ -37,6 +38,8 @@
    --grey: #3A3E45; // var(--grey);
    --blue: #4875FF; // var(--blue);
    --light-blue: #E5EBFF; // var(--light-blue);
+   --light-blue-2: #E6EAF5; // var(--light-blue-2);
+   --table-bg: #F1F5FF; // var(--table-bg);
 
    
   // --------------- default text color variables ---------------
@@ -53,10 +56,13 @@
   --br-b: #CCD7FF; // var(--br-b);
   --br-c: #E6EAF5; // var(--br-c);
   --br-d: #ffffff; // var(--br-d);
+  --br-e: #4875FF; // var(--br-e);
+  --br-f: #F6F6F6; // var(--br-f);
 
  // --------------- gradients bg ---------------
   --gr-a: linear-gradient(180deg, #E6EAF5 0%, rgba(230, 234, 245, 0.00) 100%); // var(--gr-a);
   --gr-b: linear-gradient(90deg, #24376F 0.15%, #BBCCED 133.51%); // var(--gr-b);
+  --gr-c: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%); // var(--gr-c);
 }       
 
 

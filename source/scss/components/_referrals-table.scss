@@ -1,0 +1,77 @@
+.referrals-table {
+    background-color: var(--white);
+    border-radius: 22px;
+    padding: 0 25px 27px;
+
+    &__thead {
+        padding: 17px 24px 12px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        span {
+            font-size: 14px;
+            line-height: 100%;
+            font-weight: 400;
+            color: var(--cl-e);
+        }
+    }
+
+    &__row {
+        padding: 18px 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        background-color: var(--white);
+        border-radius: 14px;
+
+        &:nth-child(even) {
+            background-color: var(--table-bg);
+        }
+    }
+
+    &__data {
+        font-size: 14px;
+        line-height: 128%;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            flex-shrink: 0;
+
+            picture,
+            img {
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 173%;
+                font-weight: 500;
+                color: var(--black);
+            }
+        }
+    }
+
+    &__profit {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        p {
+            font-size: 14px;
+            line-height: 128%;
+            font-weight: 400;
+            color: var(--black);
+        }
+    }
+}

@@ -1,169 +1,74 @@
 .banner-section {
   z-index: 1;
-  position: relative;
+  // position: relative;
   max-width: 1660px;
   border-radius: clamp(20px, 1.6901vw, 24px);
   padding: clamp(110px, 10.9155vw, 155px) 0 clamp(140px, 10.9155vw, 155px);
   overflow: hidden;
+  margin: 0 auto 120px;
 
-  .title {
-    width: 100%;
-    max-width: clamp(814px, 59.217vw, 983px);
-    color: var(--white);
-    font-family: var(--second-family);
-    font-size: clamp(90px, 6.627vw, 110px);
-    line-height: 113.307%;
-
-    @include desktop {
-      @include for-tablet {
-        max-width: clamp(594px, 57.3239vw, 814px);
-        font-size: clamp(64px, 6.338vw, 90px);
-        line-height: 111.111%;
-      }
-    }
-
-    @include tablet {
-      font-size: clamp(50px, 6.25vw, 64px);
-
-      @include for-mobile {
-        max-width: clamp(440px, 56.641vw, 580px);
-        line-height: 109.375%;
-      }
-    }
-
-    @include mobile {
-      max-width: 440px;
-      line-height: 110%;
-    }
+  &__bg {
+    position: absolute;
+    top: var(--header-height);
+    // top: 105px;
+    right: 0;
+    z-index: -1;
   }
 
-  @include desktop {
-    @include for-tablet {
-      padding: clamp(89px, 7.7465vw, 110px) 0 clamp(89px, 9.8592vw, 140px);
-      border-radius: 20px;
-    }
-  }
 
-  @include tablet {
-    @include for-mobile {
-      padding: 89px 0;
-      border-radius: 14px;
-    }
-  }
+  // @include desktop {
+  //   @include for-tablet {
+  //     padding: clamp(89px, 7.7465vw, 110px) 0 clamp(89px, 9.8592vw, 140px);
+  //     border-radius: 20px;
+  //   }
+  // }
 
-  @include mobile {
-    padding: 40px 0 191px;
-  }
+  // @include tablet {
+  //   @include for-mobile {
+  //     padding: 89px 0;
+  //     border-radius: 14px;
+  //   }
+  // }
 
-  @media (min-width: (1706px)) {
-    margin: 0 auto 120px;
-  }
+  // @include mobile {
+  //   padding: 40px 0 191px;
+  // }
 
-  @media (max-width: (1705px)) {
-    @include for-laptop {
-      margin: 0 30px 100px;
-    }
-  }
+  // @media (max-width: (1705px)) {
+  //   @include for-laptop {
+  //     margin: 0 30px 100px;
+  //   }
+  // }
 
-  @include laptop {
-    margin: 0 var(--container-offset) clamp(70px, 7.0423vw, 100px);
-  }
+  // @include laptop {
+  //   margin: 0 var(--container-offset) clamp(70px, 7.0423vw, 100px);
+  // }
 
-  @include tablet{
-    margin-bottom: clamp(50px, 6.836vw, 70px);
-  }
+  // @include tablet{
+  //   margin-bottom: clamp(50px, 6.836vw, 70px);
+  // }
 
   &__box {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-
-    @include tablet {
-      gap: clamp(30px, 5.859vw, 60px);
-    }
-
-    .main-btn {
-      min-width: clamp(223px, 18.5915vw, 264px);
-      padding: 6px;
-
-      @include desktop {
-        padding: 5px;
-        min-width: 223px;
-      }
-
-      @include tablet {
-        min-width: 164px;
-        padding: 4px;
-      }
-
-      @include mobile {
-        min-width: 202px;
-        padding: 5px;
-      }
-
-      &__icon {
-        width: 48px;
-        height: 48px;
-
-        @include desktop {
-          height: 45px;
-          width: 45px;
-        }
-
-        @include tablet {
-          width: 31px;
-          height: 31px;
-        }
-
-        @include mobile {
-          width: 35px;
-
-          height: 35px;
-        }
-      }
-
-      span:not([class]) {
-        font-family: var(--second-family);
-        font-size: clamp(16px, 1.2676vw, 18px);
-
-        @include desktop {
-          @include for-tablet {
-            font-size: clamp(13px, 1.1268vw, 16px);
-          }
-        }
-
-        @include tablet {
-          font-size: 13px;
-        }
-
-        @include mobile {
-          font-size: 16px;
-        }
-      }
-    }
+    gap: 85px;
   }
 
-  &__inner{
-    display: flex;
-    align-items: center;
-    gap: 54px;
-    flex-wrap: wrap;
+  &__info {
+    max-width: 600px;
+    width: 100%;
+  }
 
-    @include desktop {
-      @include for-tablet {
-       gap: clamp(22px, 3.0986vw, 44px);
-      }
-    }
-  
-    @include tablet {
-      @include for-mobile {
-        gap: 22px;
-      }
-    }
-  
-    @include mobile {
-      gap: 10px 20px;
-    }
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__descr {
+    display: block;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 500;
   }
 }
 

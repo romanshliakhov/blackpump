@@ -245,12 +245,23 @@
 //   }
 // }
 
+h1,
+.h1 {
+  font-size: 70px;
+  line-height: 97%;
+  font-weight: 500;
+  background: linear-gradient(90deg, #24376F 0.15%, #BBCCED 133.51%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h2, 
 .h2 {
   font-size: 55px;
   line-height: 118%;
   font-weight: 700;
-  background: var(--gradient, linear-gradient(90deg, #24376F 0.15%, #BBCCED 133.51%));
+  background: linear-gradient(90deg, #24376F 0.15%, #BBCCED 133.51%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
